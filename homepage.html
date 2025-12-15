@@ -6,29 +6,96 @@
     <link rel="stylesheet" href="style.css">
     <title>Banka</title>
 </head>
-<header>
-    <div class="logo">Banka</div>
-    <nav class="nav">
-        <div class="leftnav">
-            <a href="#">Individë</a>
-            <a href="#">Premium</a>
-            <a href="#">Biznese</a>
-        </div>
-        <div class="rightnav">
-            <a href="file:///C:/Users/admin/Documents/GitHub/ProjektUBT/login.html">Login or Register</a>
-        </div>
-    </nav>
-</header>
 <body>
-    <div class="pytja">
-        <h1>What Am I Looking For?</h1>
-    </div>
-    <div class="sherbimet">
-        <div class="box">I want to apply for a credit card</div>
-        <div class="box">I want to take out a loan over 10,000 €</div>
-        <div class="box">I want to take out a loan over 30,000 €</div>
-        <div class="box">I want to see the exchange rates of the day</div>
-        <div class="box">I want to update my info</div>
-    </div>
+    <header>
+        <div class="logo">Banka</div>
+        <nav class="nav">
+            <div class="leftnav">
+                <a href="#">Individual</a>
+                <a href="#">Premium</a>
+                <a href="#">Business</a>
+            </div>
+            <div class="rightnav">
+                <button onclick="window.location.href='login.html'">Login or Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Banking made simple.</h1>
+                <p>Open an account in minutes, manage your money 24/7, and reach your goals faster.</p>
+                <div class="hero-actions">
+                    <button class="primary" onclick="window.location.href='activateaccount.html'">Open an account</button>
+                    <button class="secondary">Compare cards</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- What am I looking for -->
+        <section class="pytja-section">
+            <div class="pytja"> 
+                <h2>What am I looking for?</h2>
+            </div>
+            <div class="sherbimet">
+                <div class="box">I want to apply for a credit card</div>
+                <div class="box">I want to take out a loan over 10,000 €</div>
+                <div class="box">I want to take out a loan over 30,000 €</div>
+                <div class="box">I want to see the exchange rates of the day</div>
+                <div class="box">I want to update my info</div>
+            </div>  
+        </section>
+
+        <!-- Quick actions -->
+        <section class="quick-actions">
+            <h2>Quick actions</h2>
+            <div class="actions-grid">
+                <button>Pay a bill</button>
+                <button>Transfer money</button>
+                <button>Exchange rates</button>
+                <button>Book an appointment</button>
+            </div>
+        </section>
+
+        <!-- Products overview -->
+        <section class="products">
+            <h2>Our products</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <h3>Cards</h3>
+                    <p>Debit and credit cards with no monthly fees and rewards on every purchase.</p>
+                    <button>Learn more</button>
+                </article>
+                <article class="product-card">
+                    <h3>Loans</h3>
+                    <p>Personal and home loans with flexible terms and competitive interest rates.</p>
+                    <button>Learn more</button>
+                </article>
+                <article class="product-card">
+                    <h3>Savings</h3>
+                    <p>High-interest savings accounts to help you grow your money safely.</p>
+                    <button>Learn more</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Help & support -->
+        <section class="support">
+            <h2>Need help?</h2>
+            <p>Call us 24/7 at <strong>+383 45 295 529</strong> or visit your nearest branch.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Branches &amp; ATMs</a>
+            <a href="#">Contact</a>
+            <a href="#">Security</a>
+            <a href="#">Terms &amp; Privacy</a>
+        </div>
+        <p>&copy; 2025 Banka. All rights reserved.</p>
+    </footer>
 </body>
 </html>

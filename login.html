@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login - Banka</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
-    <h1>Login</h1>
-    <div class="input-box" > <input type="text" 
-        placeholder="Username">
-    </div>
-    <div class="input-box" > <input type="text" 
-        placeholder="Password" >
-    </div>
-</div>
-<button type="submit" class="btn">Login</button>
-<div class="register-link"><p>
-    Don't have an account? <button>
-        <a href="file:///C:/Users/admin/Documents/GitHub/ProjektUBT/activateaccount.html">Activate account</a>
-    </button>
-</p></div>
+    <main class="auth-page">
+        <section class="auth-card">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn auth-btn">Login</button>
+            <div class="register-link">
+                <p>
+                    Don't have an account?
+                    <a class="btn-link" href="activateaccount.html">Activate account</a>
+                </p>
+            </div>
+            <div class="register-link">
+                <p>
+                    <a class="btn-link" href="homepage.html">← Back to homepage</a>
+                </p>
+            </div>
+        </section>
+    </main>
 </body>
 </html> 
