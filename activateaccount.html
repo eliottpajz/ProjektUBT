@@ -7,31 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="auth-page">
-        <section class="auth-card">
-            <h1>Activate account</h1>
+
+<main class="auth-page">
+    <section class="auth-card">
+        <h1>Activate account</h1>
+
+        <form id="activateForm" novalidate>
+
             <div class="input-box">
-                <input type="text" placeholder="Name">
+                <input id="name" name="name" type="text" placeholder="Name" required>
+                <div id="nameError" class="error"></div>
             </div>
+
             <div class="input-box">
-                <input type="text" placeholder="Surname">
+                <input id="surname" name="surname" type="text" placeholder="Surname" required>
+                <div id="surnameError" class="error"></div>
             </div>
+
             <div class="input-box">
-                <input type="text" placeholder="Personal number">
+                <input id="personal" name="personal" type="text"
+                       placeholder="Personal number" required>
+                <div id="personalError" class="error"></div>
             </div>
+
             <div class="input-box">
-                <input type="tel" placeholder="Phone number">
+                <input id="phone" name="phone" type="tel"
+                       placeholder="Phone number">
+                <div id="phoneError" class="error"></div>
             </div>
+
             <div class="input-box">
-                <input type="email" placeholder="Email">
+                <input id="email" name="email" type="email"
+                       placeholder="Email" required>
+                <div id="emailError" class="error"></div>
             </div>
+
             <button type="submit" class="btn auth-btn">Activate</button>
-            <div class="register-link">
-                <p>
-                    <a class="btn-link" href="homepage.html">← Back to homepage</a>
-                </p>
-            </div>
-        </section>
-    </main>
+            <div id="formSuccess" class="success"></div>
+
+        </form>
+
+        <div class="register-link">
+            <p>
+                <a class="btn-link" href="homepage.html">← Back to homepage</a>
+            </p>
+        </div>
+    </section>
+</main>
+
+<script src="activate-validimi.js"></script>
 </body>
 </html>
