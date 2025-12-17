@@ -9,14 +9,24 @@
 <body>
     <main class="auth-page">
         <section class="auth-card">
+            <form class="feedback-form" onsubmit="event.preventDefault(); alert('Logged in successfully!');">
+            <div class="input-row">
             <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username">
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password">
-            </div>
-            <button type="submit" class="btn auth-btn">Login</button>
+<ul>
+<form id="registerForm" novalidate>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" 
+            required placeholder="min 3 karaktere" />
+            <div id="usernameError" class="error" aria-live="polite"></div>
+ <label for="password">Password</label>
+            <input id="password" name="password" type="password" required
+                placeholder="min 8 (1 uppercase, 1 digit, 1 special)" />
+            <div id="passwordError" class="error" aria-live="polite"></div>
+             <button type="submit" value="Submit" id="btn-auth-btn">Login</button>
+             <div id="formSuccess" class="success" role="status" aria-live="polite"></div>
+</ul>
+</form>
+           
             <div class="register-link">
                 <p>
                     Don't have an account?
@@ -30,5 +40,7 @@
             </div>
         </section>
     </main>
+    <script src="validimi.js"></script>
+
 </body>
 </html> 
