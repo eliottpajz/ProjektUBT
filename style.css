@@ -232,3 +232,6 @@ nav{
 .slider-nav a:hover {
     opacity: 1;
 }
+.error{
+    color: red;
+}
