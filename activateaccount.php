@@ -42,6 +42,16 @@
                 <div id="emailError" class="error"></div>
             </div>
 
+            <div class="input-box">
+                <input id="username" name="username" type="text" placeholder="Username" required>
+                <div id="usernameError" class="error"></div>
+            </div>
+
+            <div class="input-box">
+                <input id="password" name="password" type="password" placeholder="Password" required>
+                <div id="passwordError" class="error"></div>
+            </div>
+
             <button type="submit" class="btn auth-btn">Activate</button>
             <div id="formSuccess" class="success"></div>
 
@@ -49,7 +59,7 @@
 
         <div class="register-link">
             <p>
-                <a class="btn-link" href="homepage.html">← Back to homepage</a>
+                <a class="btn-link" href="homepage.php">← Back to homepage</a>
             </p>
         </div>
     </section>

@@ -14,10 +14,10 @@
                 <a href="#">Individual</a>
                 <a href="#">Premium</a>
                 <a href="#">Business</a>
-                <button class="rightnav" onclick="window.location.href='aboutus.html'">About Us</button>
+                <button class="rightnav" onclick="window.location.href='aboutus.php'">About Us</button>
             </div>
             <div class="rightnav">
-                <button onclick="window.location.href='login.html'">Login or Register</button>
+                <button onclick="window.location.href='login.php'">Login or Register</button>
             </div>
         </nav>
     </header>

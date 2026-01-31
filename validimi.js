@@ -34,7 +34,30 @@ form.addEventListener('submit', function (e) {
     }
 
     if (valid) {
-        formSuccess.textContent = 'Login i suksesshëm (demo)';
-        form.reset();
+        // submit credentials to server
+        const data = new FormData();
+        data.append('username', username.value.trim());
+        data.append('password', password.value);
+
+        fetch('php/login.php', {
+            method: 'POST',
+            body: data
+        })
+        .then(r => r.json())
+        .then(res => {
+            if (res.success) {
+                formSuccess.textContent = 'Login successful.';
+                form.reset();
+            } else {
+                formSuccess.textContent = '';
+                if (res.error) {
+                    passwordError.textContent = res.error;
+                }
+            }
+        })
+        .catch(err => {
+            formSuccess.textContent = '';
+            passwordError.textContent = 'Server error. Try again later.';
+        });
     }
 });

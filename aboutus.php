@@ -6,7 +6,7 @@
      <link rel="stylesheet" href="style.css">
     <title>About Us - Banka</title>
     <p>
-                    <a class="btn-link" href="homepage.html">← Back to homepage</a>
+                    <a class="btn-link" href="homepage.php">← Back to homepage</a>
                 </p>
 </head>
 <body>
@@ -17,17 +17,22 @@
                 <a href="#">Individual</a>
                 <a href="#">Premium</a>
                 <a href="#">Business</a>
-                <button class="rightnav" onclick="window.location.href='aboutus.html'">About Us</button>
+                <button class="rightnav" onclick="window.location.href='aboutus.php'">About Us</button>
             </div>
             <div class="rightnav">
-                <button onclick="window.location.href='login.html'">Login or Register</button>
+                <button onclick="window.location.href='login.php'">Login or Register</button>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="about-section">
-            <h1>Find out more about:</h1>
+            <h1>About Banka</h1>
+            <div class="container-narrow">
+                <p>We are committed to providing secure, simple and modern banking services to individuals and businesses. Our mission is to empower customers with transparent products, excellent customer support and digital-first experiences.</p>
+            </div>
+
+            <h2 style="text-align:center; margin-top:1.5rem; color:#08566A">Explore</h2>
             <div class="about-grid">
                 <div class="about-box">Management Board</div>
                 <div class="about-box">Prices & Evaluations</div>

@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/php/auth.php';
+$user = $_SESSION['user'] ?? null;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +15,18 @@
         <div class="logo">Banka</div>
         <nav class="nav">
             <div class="leftnav">
-                <a href="#">Individual</a>
-                <a href="#">Premium</a>
-                <a href="#">Business</a>
-                <button class="rightnav" onclick="window.location.href='aboutus.html'">About Us</button>
+                <a href="individual.php">Individual</a>
+                <a href="premium.php">Premium</a>
+                <a href="business.php">Business</a>
+                <button class="rightnav" onclick="window.location.href='aboutus.php'">About Us</button>
             </div>
             <div class="rightnav">
-                <button onclick="window.location.href='login.html'">Login or Register</button>
+                <?php if ($user): ?>
+                    <span class="greeting">Përshëndetje, <?php echo htmlspecialchars($user['name']); ?></span>
+                    <button onclick="window.location.href='logout.php'">Logout</button>
+                <?php else: ?>
+                    <button onclick="window.location.href='login.php'">Login or Register</button>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
@@ -29,8 +38,8 @@
                 <h1>Banking made simple.</h1>
                 <p>Open an account in minutes, manage your money 24/7, and reach your goals faster.</p>
                 <div class="hero-actions">
-                    <button class="primary" onclick="window.location.href='activateaccount.html'">Open an account</button>
-                    <button class="secondary" onclick="window.location.href='cards.html'">Compare cards</button>
+                    <button class="primary" onclick="window.location.href='activateaccount.php'">Open an account</button>
+                    <button class="secondary" onclick="window.location.href='cards.php'">Compare cards</button>
                 </div>
             </div>
         </section>
