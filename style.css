@@ -179,6 +179,7 @@ nav{
     border: 1px solid #CED4DA;
     font-size: 1rem;
     box-sizing: border-box;
+<<<<<<< HEAD
 }
 
 .input-box label {
@@ -190,10 +191,13 @@ nav{
 
 .input-box {
     margin-bottom: 12px;
+=======
+>>>>>>> parent of da31c01 (Merge branch 'main' of https://github.com/eliottpajz/ProjektUBT)
 }
 
-.auth-btn {
+.auth-btn{
     width: 100%;
+<<<<<<< HEAD
     margin-top: 10px;
     background: linear-gradient(180deg,#0b7285,#08566a);
     border-radius: 8px;
@@ -237,6 +241,14 @@ nav{
     font-weight: 600;
     color: #083E43;
     text-align: center;
+=======
+    margin-top: 5px;
+}
+
+.register-link{
+    margin-top: 15px;
+    font-size: 0.95rem;
+>>>>>>> parent of da31c01 (Merge branch 'main' of https://github.com/eliottpajz/ProjektUBT)
 }
 
 .product-hero{
