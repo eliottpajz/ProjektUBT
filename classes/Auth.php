@@ -29,6 +29,16 @@ class Auth
         return $this->userModel->create($username, $email, $password);
     }
 
+    public function usernameExists($username)
+    {
+        return (bool) $this->userModel->findByUsername($username);
+    }
+
+    public function emailExists($email)
+    {
+        return (bool) $this->userModel->findByEmail($email);
+    }
+
     public function logout()
     {
         session_destroy();

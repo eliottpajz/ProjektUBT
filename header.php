@@ -28,7 +28,9 @@ function activeLink($page)
         <div class="rightnav">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <span class="user-name">Hi, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                <a href="dashboard.php">Dashboard</a>
+                <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+                    <a href="dashboard.php">Dashboard</a>
+                <?php endif; ?>
                 <a href="logout.php">Logout</a>
             <?php else: ?>
                 <button onclick="window.location.href='login.php'">Login / Register</button>

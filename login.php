@@ -25,6 +25,9 @@ require_once 'header.php';
 <main class="auth-page">
     <section class="auth-card">
         <h1>Login</h1>
+        <?php if (!empty($_GET['registered'])): ?>
+            <p class="success">Registration successful! Please log in with your new account.</p>
+        <?php endif; ?>
         <?php if (!empty($errors['form'])): ?>
             <p class="error"><?php echo htmlspecialchars($errors['form']); ?></p>
         <?php endif; ?>

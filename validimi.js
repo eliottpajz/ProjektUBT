@@ -1,4 +1,5 @@
-const usernameRe = /^[a-zA-Z0-9._-]{3,20}$/;
+console.log('validimi.js loaded');
+const usernameRe = /^[^\s]{3,20}$/;
 const passwordRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -42,6 +43,12 @@ function validateRegisterForm() {
     if (!form) return;
 
     form.addEventListener('submit', function (e) {
+        console.log('register form submit event');
+        const submitStatus = document.getElementById('submitStatus');
+        if (submitStatus) {
+            submitStatus.textContent = 'Submit event fired.';
+        }
+
         const username = document.getElementById('username');
         const email = document.getElementById('email');
         const password = document.getElementById('password');
@@ -54,11 +61,11 @@ function validateRegisterForm() {
         setText('confirmPasswordError', '');
 
         if (!usernameRe.test(username.value.trim())) {
-            setText('usernameError', 'Username i pavlefshëm (3–20 karaktere).');
+            setText('usernameError', 'Username must be 3-20 characters with no spaces.');
             valid = false;
         }
         if (!emailRe.test(email.value.trim())) {
-            setText('emailError', 'Email i pavlefshëm.');
+            setText('emailError', 'Email is invalid.');
             valid = false;
         }
         if (!passwordRe.test(password.value)) {
@@ -201,8 +208,21 @@ function initSlider() {
     startTimer();
 }
 
-validateLoginForm();
-validateRegisterForm();
-validateContactForm();
-validateActivateForm();
-initSlider();
+function initValidation() {
+    console.log('validimi initValidation');
+    const jsStatus = document.getElementById('jsStatus');
+    if (jsStatus) {
+        jsStatus.textContent = 'JS validation loaded.';
+    }
+    validateLoginForm();
+    validateRegisterForm();
+    validateContactForm();
+    validateActivateForm();
+    initSlider();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initValidation);
+} else {
+    initValidation();
+}

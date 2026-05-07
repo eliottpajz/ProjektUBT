@@ -8,6 +8,6 @@
     </div>
     <p id="rightsReserved">&copy; 2025 Banka. All rights reserved.</p>
 </footer>
-<script src="validimi.js"></script>
+<script src="validimi.js?v=3" defer></script>
 </body>
 </html>
