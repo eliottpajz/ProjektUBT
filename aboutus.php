@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
-    <title>About Us - Banka</title>
-    <p>
-                    <a class="btn-link" href="homepage.php">← Back to homepage</a>
-                </p>
-</head>
+<?php
+    require_once 'header.php';
+?>
 <body>
     <header>
         <div class="logo">Banka</div>
@@ -52,12 +44,12 @@
 
     <footer>
         <div class="footer-links">
-            <a href="#">Branches &amp; ATMs</a>
+            <a href="#">Branches & ATMs</a>
             <a href="#">Contact</a>
             <a href="#">Security</a>
-            <a href="#">Terms &amp; Privacy</a>
+            <a href="#">Terms & Privacy</a>
         </div>
-        <p>&copy; 2025 Banka. All rights reserved.</p>
+        <p>c 2025 Banka. All rights reserved.</p>
     </footer>
 </body>
 </html>

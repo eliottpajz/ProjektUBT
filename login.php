@@ -1,56 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Banka</title>
-    <link rel="stylesheet" href="style.css">
-     
-</head>
+<?php
+    session_start();
+    $pageTitle = 'Login';
+
+    require_once 'database.php';
+    require_once 'users.php';
+
+    $error = "";
+
+    if(isset($_SESSION['user_id'])){
+        header("Location: home.php");
+        exit;
+    }
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $db = new Database();
+        $connection = $db->getConnection();
+        $users = new Users($connection);
+
+        $email = trim($_POST['email'] ?? '');
+        $password = $_POST['password'] ?? '';
+
+        $user = $users->login($email, $password);
+
+        if($user !== false){
+            session_regenerate_id(true);
+
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['lastname'] = $user['lastname'];
+            $_SESSION['isAdmin'] = $user['isAdmin'];
+
+            if(isset($_SESSION['redirect_after_login'])){
+                $redirect = $_SESSION['redirect_after_login'];
+                unset($_SESSION['redirect_after_login']);
+                header("Location: $redirect");
+            }else{
+                header("Location: home.php");
+            }
+            exit;
+        }else{
+            $error = "Incorrect email or password!";
+        }
+    }
+
+    require_once 'formHeader.php';
+?>
+
 <body>
-    <main class="auth-page">
-        <section class="auth-card">
-            <h1>Login</h1>
-<form id="registerForm" novalidate>
+    <main>
+        <div id="container" class="login-container">
+            <img src="../images/icons/backBtn.png" alt="Back Button" id="backArrow">
 
-    <div class="input-box">
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" required placeholder="min 3 karaktere">
-        <div id="usernameError" class="error" aria-live="polite"></div>
-    </div>
-
-    <div class="input-box">
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" required placeholder="min 8 (1 uppercase, 1 digit, 1 special)">
-        <div id="passwordError" class="error" aria-live="polite"></div>
-    </div>
-
-    <div class="input-box">
-        <label>
-            <input id="remember" name="remember" type="checkbox" value="1"> Mbaje mend (Remember me)
-        </label>
-    </div>
-
-    <button type="submit" class="auth-btn">Login</button>
-    <div id="formSuccess" class="success" aria-live="polite"></div>
-</form>
-           
-            <div class="register-link">
-                <p>
-                    Don't have an account?
-                    <a class="btn-link" href="activateaccount.php">Activate account</a>
-                </p>
+            <div id="left">
+                <img src="../images/vital-drop/Drop.png" alt="Logo" draggable="false">
+                <img src="../images/vital-drop/VitalDrop.png" alt="Vital Drop Text" draggable="false">
             </div>
-            <div class="register-link">
 
-               
+            <div id="right">
+                <form action="login.php" id="login-form" method="POST">
+                    <div id="inputs">
+                        <input type="text" name="email" id="login-email" class="input" placeholder="Email">
+                        <div id="loginEmailError" class="error" aria-live="polite"></div>
+                        <br>
+                        <input type="password" name="password" id="login-password" class="input" placeholder="Password">
+                        <div id="loginPasswordError" class="error" aria-live="polite"></div>
+                        <br>
+
+                        <input type="submit" value="Log In" id="formBtn"><br>
+
+                        <?php if(!empty($error)):?>
+                            <div class="error" role="alert"><?= htmlspecialchars($error) ?></div>
+                        <?php endif;?>
+
+                        <a href="register.php" id="hasAccount">Don't have an account?</a>
+                    </div>
+                </form>
             </div>
-            <p>
-                    <a class="btn-link" href="homepage.php">← Back to homepage</a>
-                </p>
-        </section>
+        </div>
     </main>
-    <script src="validimi.js"></script>
-
+    <script src="../JS/forms.js"></script>
 </body>
 </html>
