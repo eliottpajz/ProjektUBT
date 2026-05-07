@@ -179,93 +179,9 @@ nav{
     border: 1px solid #CED4DA;
     font-size: 1rem;
     box-sizing: border-box;
-<<<<<<< HEAD
-}
-
-.input-box label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #08566A;
-}
-
-.input-box {
-    margin-bottom: 12px;
-=======
->>>>>>> parent of da31c01 (Merge branch 'main' of https://github.com/eliottpajz/ProjektUBT)
 }
 
 .auth-btn{
-    width: 100%;
-<<<<<<< HEAD
-    margin-top: 10px;
-    background: linear-gradient(180deg,#0b7285,#08566a);
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 1rem;
-    color: #fff;
-    border: none;
-    box-shadow: 0 6px 18px rgba(11,114,133,0.18);
-}
-
-.auth-btn:hover{transform: translateY(-1px);}
-
-.greeting{
-    margin-right: 12px;
-    color: #08566A;
-    font-weight: 600;
-}
-
-/* About / Product pages */
-.about-section {
-    padding: 2rem 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-.about-section h1{
-    color: #0B7285;
-    text-align: center;
-    margin-bottom: 1.25rem;
-}
-.about-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-}
-.about-box{
-    background: linear-gradient(180deg,#fff,#f7fbfb);
-    border: 1px solid #E6EFF0;
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(11,114,133,0.06);
-    font-weight: 600;
-    color: #083E43;
-    text-align: center;
-=======
-    margin-top: 5px;
-}
-
-.register-link{
-    margin-top: 15px;
-    font-size: 0.95rem;
->>>>>>> parent of da31c01 (Merge branch 'main' of https://github.com/eliottpajz/ProjektUBT)
-}
-
-.product-hero{
-    background: linear-gradient(90deg, #E9F7F8, #FFFFFF);
-    padding: 2.5rem 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #E6EFF0;
-}
-.product-hero h2{ color:#0B7285; margin:0 0 8px 0 }
-.product-cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:18px; max-width:1100px; margin: 1rem auto }
-.product-card{ background:#fff; padding:20px; border-radius:10px; border:1px solid #E6EFF0; box-shadow:0 6px 18px rgba(11,114,133,0.04) }
-.product-card h3{ color:#08566A; margin-top:0 }
-
-/* small utility */
-.container-narrow{ max-width:980px; margin: 0 auto; padding:0 12px }
-
-.auth-btn {
     width: 100%;
     margin-top: 5px;
 }

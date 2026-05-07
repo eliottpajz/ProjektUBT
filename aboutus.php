@@ -1,6 +1,17 @@
+<<<<<<< HEAD:aboutus.php
 <?php
     require_once 'header.php';
 ?>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+    <title>About Us - Banka</title>
+</head>
+>>>>>>> parent of da31c01 (Merge branch 'main' of https://github.com/eliottpajz/ProjektUBT):aboutus.html
 <body>
     <header>
         <div class="logo">Banka</div>
